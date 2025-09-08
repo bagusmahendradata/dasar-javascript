@@ -1,14 +1,11 @@
-//MENTUKAN SALDO AKHIR
+let namaDepan, namaBelakang, namaLengkap;
 
-let saldoAwal = Number(prompt("Masukan saldo awal anda : "));
-let saldoTambahan = Number(prompt("Masukan saldo tambahan anda : "));
-const saldoAkhir = saldoAwal + saldoTambahan
-alert(`Saldo anda saat ini adalah : ${saldoAkhir}`);
+document.getElementById("button_merge").onclick = function (){
+    namaDepan = document.getElementById("nama_depan").value;
+    namaBelakang = document.getElementById("nama_belakang").value;
+    namaLengkap = `${namaDepan} ${namaBelakang}`;
+    
+    console.log(namaLengkap);
 
-
-//Menampilkan hari
-
-let hari = new Date().getDay()
-let namaHari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"]
-const hasil= namaHari[hari]
-alert(`Hari ini adalah hari ${hasil}`)
+    document.getElementById("nama_lengkap").textContent = namaLengkap;
+};
